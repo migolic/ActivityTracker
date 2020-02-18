@@ -1,0 +1,27 @@
+﻿@model IEnumerable<miha.Models.activiti.activity>
+@{
+	ViewData["Title"] = "Ime";
+}
+
+@foreach (var item in Model)
+{
+	<div style="height:50px; text-align:center; font-size:30px; font-family:Papyrus; margin-top:20px;">
+		Ime:@Html.DisplayFor(modelItem => item.Ime)
+	</div><br />
+	<div style="height:70px; text-align:center; font-size:15px; font-family:Papyrus; margin-top:10px;">
+	
+		Tezina: @Html.DisplayFor(modelItem => item.Tezina)<br />
+		Visina: @Html.DisplayFor(modelItem => item.Visina)<br />
+		Puls:@Html.DisplayFor(modelItem=> item.Puls)<br />
+		Spavanje: @Html.DisplayFor(modelItem => item.Spavanje)<br />
+		.......................................................<br />
+
+	</div>
+	<br />
+
+}
+	<p style="text-align:center; font-size:20px; padding-top:40px;">
+
+		<a asp-action="Index">Back</a>
+	</p>
+

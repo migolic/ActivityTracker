@@ -1,0 +1,48 @@
+﻿@model miha.Models.activiti.activity
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>activity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tezina)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tezina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visina)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visina)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Puls)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Puls)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Spavanje)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Spavanje)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

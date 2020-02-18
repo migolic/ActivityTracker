@@ -1,0 +1,87 @@
+﻿@model IEnumerable<miha.Models.activiti.activity>
+
+<div style="text-align:center; font-size:30px;">
+	<h2>Aktivnost ljudi u tablici</h2>
+</div>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tezina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Visina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puls)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spavanje)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tezina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Visina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puls)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spavanje)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div style="text-align:center;">
+	<form asp-action="byname" method="post">
+		<label class="h1" style="font-family:Algerian;">Sort by:</label>
+		<br />
+		<button type="submit" style="padding:15px 15px; width:200px; margin-left:40px;  margin-bottom:15px;">
+			Ime
+		</button>
+	</form>
+	<form asp-action="byvisina" method="post">
+		<button type="submit" style="padding:15px 15px; width:200px; margin-left:40px;  margin-bottom:15px;">
+			Visina
+		</button>
+	</form>
+	<form asp-action="bytezina" method="post">
+		<button type="submit" style="padding:15px 15px; width:200px; margin-left:40px;  margin-bottom:15px;">
+			Tezina
+		</button>
+	</form>
+	<form asp-action="visokpuls" method="post">
+		<button type="submit" style="padding:15px 15px; width:200px; margin-left:40px;  margin-bottom:15px;">
+			Puls
+		</button>
+	</form>
+	<form asp-action="byspavanje" method="post">
+		<button type="submit" style="padding:15px 15px; width:200px; margin-left:40px;  margin-bottom:15px;">
+			Spavanje
+		</button>
+	</form>
+</div>
