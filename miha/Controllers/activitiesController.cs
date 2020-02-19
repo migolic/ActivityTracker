@@ -157,7 +157,7 @@ namespace miha.Controllers
 		}
 		public IActionResult byvisina()
 		{
-			var visina = from e in _context.activity orderby e.Visina select e;
+			var visina = from e in _context.activity orderby e.Visina desc select e;
 			return View(visina);
 		}
 		public IActionResult bytezina()
