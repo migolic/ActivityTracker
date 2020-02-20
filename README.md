@@ -1,0 +1,1 @@
+Aplikacija koja prikazuje aktivnost ljudi, sadrzi ime, visinu, tezinu, puls i vrijeme spavanje. Moze se dodati nova osoba, brisati i uredivati postojeca, isto tako ima prikaz sort za sortiranje po zeljenim djelovima.
